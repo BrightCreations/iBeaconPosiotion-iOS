@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MapNorthCorrection</key>
+	<integer>105</integer>
+	<key>PixelToCM_Ration</key>
+	<integer>3</integer>
+	<key>Beacons</key>
+	<dict>
+		<key>10001</key>
+		<dict>
+			<key>Location</key>
+			<string>1,1</string>
+			<key>RoomPosition</key>
+			<string>10,10</string>
+		</dict>
+		<key>10002</key>
+		<dict>
+			<key>Location</key>
+			<string>100,1</string>
+			<key>RoomPosition</key>
+			<string>90,10</string>
+		</dict>
+		<key>10003</key>
+		<dict>
+			<key>Location</key>
+			<string>1,50</string>
+			<key>RoomPosition</key>
+			<string>10,50</string>
+		</dict>
+		<key>10004</key>
+		<dict>
+			<key>Location</key>
+			<string>100,50</string>
+			<key>RoomPosition</key>
+			<string>90,50</string>
+		</dict>
+		<key>10005</key>
+		<dict>
+			<key>Location</key>
+			<string>1,100</string>
+			<key>RoomPosition</key>
+			<string>10,90</string>
+		</dict>
+		<key>10006</key>
+		<dict>
+			<key>Location</key>
+			<string>100,100</string>
+			<key>RoomPosition</key>
+			<string>90,90</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
