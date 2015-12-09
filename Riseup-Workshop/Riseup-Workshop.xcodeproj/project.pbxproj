@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A4BF92F1C17198900A10DE7 /* MyJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BF92E1C17198900A10DE7 /* MyJSONParser.m */; };
+		8A4BF9331C171BAE00A10DE7 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BF9321C171BAE00A10DE7 /* ServiceLayer.swift */; };
 		8AD3BC571C147610009D906C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3BC561C147610009D906C /* AppDelegate.swift */; };
 		8AD3BC591C147610009D906C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3BC581C147610009D906C /* ViewController.swift */; };
 		8AD3BC5C1C147610009D906C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD3BC5A1C147610009D906C /* Main.storyboard */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A4BF92D1C17198900A10DE7 /* MyJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyJSONParser.h; sourceTree = "<group>"; };
+		8A4BF92E1C17198900A10DE7 /* MyJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyJSONParser.m; sourceTree = "<group>"; };
+		8A4BF9321C171BAE00A10DE7 /* ServiceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		8AD3BC531C147610009D906C /* Riseup-Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Riseup-Workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD3BC561C147610009D906C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AD3BC581C147610009D906C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +124,9 @@
 				8AD3BC621C147610009D906C /* Info.plist */,
 				8AD3BC881C1476D6009D906C /* Riseup-Workshop-Bridging-Header.h */,
 				8AD3BC8E1C14772F009D906C /* Globals.swift */,
+				8A4BF92D1C17198900A10DE7 /* MyJSONParser.h */,
+				8A4BF92E1C17198900A10DE7 /* MyJSONParser.m */,
+				8A4BF9321C171BAE00A10DE7 /* ServiceLayer.swift */,
 			);
 			path = "Riseup-Workshop";
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 				8AD3BC4F1C147610009D906C /* Sources */,
 				8AD3BC501C147610009D906C /* Frameworks */,
 				8AD3BC511C147610009D906C /* Resources */,
+				8A4BF9371C171DAE00A10DE7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -269,16 +278,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8A4BF9371C171DAE00A10DE7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8AD3BC4F1C147610009D906C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4BF92F1C17198900A10DE7 /* MyJSONParser.m in Sources */,
 				8AD3BC591C147610009D906C /* ViewController.swift in Sources */,
 				8AD3BC8D1C14770C009D906C /* BeaconManager.swift in Sources */,
 				8AD3BC8B1C1476D7009D906C /* BCBeacon.m in Sources */,
 				8AD3BC8F1C14772F009D906C /* Globals.swift in Sources */,
 				8AD3BC571C147610009D906C /* AppDelegate.swift in Sources */,
+				8A4BF9331C171BAE00A10DE7 /* ServiceLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Riseup-Workshop/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BrightCreations.Riseup-Workshop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Riseup-Workshop/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BrightCreations.Riseup-Workshop";
 				PRODUCT_NAME = "$(TARGET_NAME)";

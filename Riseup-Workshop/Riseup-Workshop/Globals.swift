@@ -13,6 +13,9 @@ let MainBeaconsSet : String = "942ACCCE-3278-5FEE-25F7-A74AD8929DE3"
 let TriPositionNotification = "TriPositionCalculated"
 let MonoPositionNotification = "MonoPositionCalculated"
 
+//TODO: Please set userNickname with a value to appear on screen
+let userNickname = ""
+
 var beaconManager = BeaconManager()
 
 struct MapComponents {

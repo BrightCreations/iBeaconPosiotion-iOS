@@ -3,3 +3,4 @@
 //
 
 #import "BCBeacon.h"
+#import "MyJSONParser.h"

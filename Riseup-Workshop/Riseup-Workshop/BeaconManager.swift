@@ -40,7 +40,7 @@ class BeaconManager: NSObject, CLLocationManagerDelegate{
 	
 	func setup() {
 		locationManager.delegate = self
-		officeRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: MainBeaconsSet)!, identifier: "Bright-Creations HQ")
+		officeRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "942ACCCE-3278-5FEE-25F7-A74AD8929DE3")!, identifier: "Riseup workshop")
 		
 		locationManager.requestAlwaysAuthorization()
 		
@@ -86,7 +86,6 @@ class BeaconManager: NSObject, CLLocationManagerDelegate{
 	
 	func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion)
 	{
-		print("<-- Did EXIT Region -->\n", terminator: "")
 		
 	}
 	
@@ -154,7 +153,7 @@ class BeaconManager: NSObject, CLLocationManagerDelegate{
 				let x = Int(locationPoints[0])!
 				let y = Int(locationPoints[1])!
 				
-				NSNotificationCenter.defaultCenter().postNotificationName(MonoPositionNotification, object: nil, userInfo: ["value":"\(x),\(y)"])
+				NSNotificationCenter.defaultCenter().postNotificationName(MonoPositionNotification, object: nil, userInfo: ["value":"\(x),\(y)", "beacon": beaconName])
 				print("\(x),\(y)\n")
 				
 				if orderedBeaonsInfo.count >= 3
