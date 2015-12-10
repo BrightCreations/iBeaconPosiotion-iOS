@@ -28,7 +28,16 @@ class ViewController: UIViewController {
 
 	func positionCalculatedNotification(notification : NSNotification)
 	{
+		
+		
 		let userInfo = notification.userInfo!
+		
+		if let beaconName = userInfo["beacon"] as? String
+		{
+			let beaconNumber = beaconName.stringByReplacingOccurrencesOfString("1000", withString: "")
+			ServiceLayer.submitPosition(beaconNumber, delegate: self, callBack: "positionSent:")
+		}
+		
 		let pointString = userInfo["value"]!
 		let subPoints = pointString.componentsSeparatedByString(",")
 		var point = CGPoint(x: Double(subPoints[0])!, y: Double(subPoints[1])!)
@@ -41,6 +50,12 @@ class ViewController: UIViewController {
 		
 		pinImage.center = point
 	}
+	
+	func positionSent(response : [String : AnyObject]?)
+	{
+		
+	}
+	
 	
 	deinit
 	{

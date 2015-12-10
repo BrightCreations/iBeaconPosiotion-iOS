@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Bright-Creations. All rights reserved.
 //
 
-let domainURL = "http://api.navandgo.com"
+let domainURL = "http://riseup.brightcreations.com"
 let imagesURLPath = "/"
-let serverURL = "http://api.navandgo.com/rest/web/"
+let serverURL = "http://riseup.brightcreations.com/api/"
 let basicAuthString = ""
 
 
@@ -23,9 +23,9 @@ class ServiceLayer : NSObject {
 		{
 			return
 		}
-		let request = NSMutableURLRequest(URL: NSURL(string: serverURL+"/utility/get-utility-by-attribute.json")!)
+		let request = NSMutableURLRequest(URL: NSURL(string: serverURL+"users/add")!)
 		
-		let bodyString = "beaconID=" + beaconID + "&username=" + userNickname
+		let bodyString = "beacon=B0" + beaconID + "&name=" + userNickname
 		
 		request.HTTPMethod = "POST"
 		
