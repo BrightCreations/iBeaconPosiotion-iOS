@@ -53,7 +53,7 @@ class ViewController: UIViewController {
 	
 	func positionSent(response : [String : AnyObject]?)
 	{
-		
+//		print(response)
 	}
 	
 	
